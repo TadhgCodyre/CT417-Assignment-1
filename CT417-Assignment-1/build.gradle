@@ -7,13 +7,16 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    //maven { url 'https://jitpack.io' }
 }
 
 dependencies {
+    implementation 'org.hamcrest:hamcrest-core:2.2'
+    implementation 'junit:junit:4.13.2'
+    implementation 'org.assertj:assertj-core:3.21.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation 'com.github.User:Repo:Tag'
+    //implementation 'com.github.User:Repo:Tag'
 }
 
 test {

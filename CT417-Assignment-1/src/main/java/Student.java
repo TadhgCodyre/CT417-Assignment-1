@@ -4,19 +4,19 @@ public class Student {
     private String DOB;
     private int id;
     private String userName;
-    private String courses;
-    private String modulesReg;
+    private String[] courses;
+    private String[] modulesReg;
 
     //constructor
     public Student(String name, int age) {
         this.globalName = name;
         this.globalAge = age;
 
-        this.userName = getUserName(globalName, globalAge);
+        this.userName = getUserName();
     }
 
-    public String getUserName(String localName, int localAge) {
-        String userName = localName+localAge;
+    public String getUserName() {
+        String userName = globalName+globalAge;
         return userName;
     }
 }
