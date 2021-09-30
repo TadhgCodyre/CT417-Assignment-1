@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-//import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test_Student {
     @Test
@@ -8,7 +8,7 @@ public class Test_Student {
 
         String testUserName = testStudent.getUserName();
 
-        System.out.println(testUserName);
-        //assertEquals(testUserName, "Jimmy21");
+        //System.out.println(testUserName);
+        assertEquals(testUserName, "Jimmy21");
     }
 }
