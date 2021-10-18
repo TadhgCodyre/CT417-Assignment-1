@@ -17,12 +17,10 @@ public class Student {
         this.id = Id;
         this.courses = courses;
         this.modulesReg = modules;
-
-        this.userName = getUserName();
+        this.userName = globalName+globalAge;
     }
 
     public String getUserName() {
-        String userName = globalName+globalAge;
         return userName;
     }
 
