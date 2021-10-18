@@ -7,7 +7,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    //maven { url 'https://jitpack.io' }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -18,8 +18,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.0.RELEASE'
-
-
+    implementation 'com.github.User:Repo:Tag'
 }
 
 test {
