@@ -8,9 +8,13 @@ public class Student {
     private String[] modulesReg;
 
     //constructor
-    public Student(String name, int age) {
+    public Student(String name, int age, String date, int Id, String[] courses, String[] modules) {
         this.globalName = name;
         this.globalAge = age;
+        this.DOB = date;
+        this.id = Id;
+        this.courses = courses;
+        this.modulesReg = modules;
 
         this.userName = getUserName();
     }
@@ -18,5 +22,25 @@ public class Student {
     public String getUserName() {
         String userName = globalName+globalAge;
         return userName;
+    }
+
+    public int getGlobalAge() {
+        return globalAge;
+    }
+
+    public String getDOB() {
+        return DOB;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String[] getCourses() {
+        return courses;
+    }
+
+    public String[] getModulesReg() {
+        return modulesReg;
     }
 }
