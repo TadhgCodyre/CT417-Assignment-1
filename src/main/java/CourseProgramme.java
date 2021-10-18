@@ -1,11 +1,11 @@
 public class CourseProgramme {
     private String courseName;
-    private String[] moduleList;
-    private String[] studentList;
+    private Module[] moduleList;
+    private Student[] studentList;
     private String startDate;
     private String endDate;
 
-    public CourseProgramme(String name, String[] modules, String[] students, String sDate, String eDate) {
+    public CourseProgramme(String name, Module[] modules, Student[] students, String sDate, String eDate) {
         this.courseName = name;
         this.moduleList = modules;
         this.studentList = students;
@@ -17,11 +17,11 @@ public class CourseProgramme {
         return courseName;
     }
 
-    public String[] getModuleList() {
+    public Module[] getModuleList() {
         return moduleList;
     }
 
-    public String[] getStudentList() {
+    public Student[] getStudentList() {
         return studentList;
     }
 

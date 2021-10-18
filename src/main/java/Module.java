@@ -1,13 +1,13 @@
 public class Module {
     private String moduleName;
     private int moduleId;
-    private String[] relatedModules;
-    private String[] relatedCourses;
+    private Student[] relatedStudents;
+    private CourseProgramme[] relatedCourses;
 
-    public Module(String name, int id, String[] modules, String[] courses) {
+    public Module(String name, int id, Student[] students, CourseProgramme[] courses) {
         this.moduleName = name;
         this.moduleId = id;
-        this.relatedModules = modules;
+        this.relatedStudents = students;
         this.relatedCourses = courses;
     }
 
@@ -19,9 +19,9 @@ public class Module {
         return moduleId;
     }
 
-    public String[] getRelatedModules() {
-        return relatedModules;
+    public Student[] getRelatedStudent() {
+        return relatedStudents;
     }
 
-    public String[] getRelatedCourses() { return relatedCourses; }
+    public CourseProgramme[] getRelatedCourses() { return relatedCourses; }
 }

@@ -4,11 +4,11 @@ public class Student {
     private String DOB;
     private int id;
     private String userName;
-    private String[] courses;
-    private String[] modulesReg;
+    private CourseProgramme[] courses;
+    private Module[] modulesReg;
 
     //constructor
-    public Student(String name, int age, String date, int Id, String[] courses, String[] modules) {
+    public Student(String name, int age, String date, int Id, CourseProgramme[] courses, Module[] modules) {
         this.globalName = name;
         this.globalAge = age;
         this.DOB = date;
@@ -24,9 +24,7 @@ public class Student {
         return userName;
     }
 
-    public int getGlobalAge() {
-        return globalAge;
-    }
+    public int getGlobalAge() { return globalAge; }
 
     public String getDOB() {
         return DOB;
@@ -36,11 +34,11 @@ public class Student {
         return id;
     }
 
-    public String[] getCourses() {
+    public CourseProgramme[] getCourses() {
         return courses;
     }
 
-    public String[] getModulesReg() {
+    public Module[] getModulesReg() {
         return modulesReg;
     }
 }
