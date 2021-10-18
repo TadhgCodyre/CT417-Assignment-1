@@ -1,14 +1,16 @@
+import org.joda.time.DateTime;
+
 public class Student {
     private String globalName;
     private int globalAge;
-    private String DOB;
+    private DateTime DOB;
     private int id;
     private String userName;
     private CourseProgramme[] courses;
     private Module[] modulesReg;
 
     //constructor
-    public Student(String name, int age, String date, int Id, CourseProgramme[] courses, Module[] modules) {
+    public Student(String name, int age, DateTime date, int Id, CourseProgramme[] courses, Module[] modules) {
         this.globalName = name;
         this.globalAge = age;
         this.DOB = date;
@@ -26,7 +28,7 @@ public class Student {
 
     public int getGlobalAge() { return globalAge; }
 
-    public String getDOB() {
+    public DateTime getDOB() {
         return DOB;
     }
 
