@@ -18,7 +18,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.0.RELEASE'
-    implementation 'com.github.TadhgCodyre:CT417-Assignment-1:1.1'
+    implementation 'com.github.TadhgCodyre:CT417-Assignment-1:1.3'
 }
 
 test {
