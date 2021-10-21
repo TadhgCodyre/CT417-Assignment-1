@@ -1,4 +1,5 @@
 import org.joda.time.DateTime;
+import java.util.ArrayList;
 
 public class Student {
     private String globalName;
@@ -6,11 +7,11 @@ public class Student {
     private DateTime DOB;
     private int id;
     private String userName;
-    private CourseProgramme[] courses;
-    private Module[] modulesReg;
+    private ArrayList<CourseProgramme> courses;
+    private ArrayList<Module> modulesReg;
 
     //constructor
-    public Student(String name, int age, DateTime date, int Id, CourseProgramme[] courses, Module[] modules) {
+    public Student(String name, int age, DateTime date, int Id, ArrayList<CourseProgramme> courses, ArrayList<Module> modules) {
         this.globalName = name;
         this.globalAge = age;
         this.DOB = date;
@@ -24,6 +25,20 @@ public class Student {
         return userName;
     }
 
+    public void addCourse(CourseProgramme course) {
+        if (course != null && !courses.contains(course)){
+            courses.add(course);
+            course.addStudent(this);
+        }
+    }
+
+    public void addModule(Module module) {
+        if (module != null && !modulesReg.contains(module)){
+            modulesReg.add(module);
+            module.addStudent(this);
+        }
+    }
+
     public int getGlobalAge() { return globalAge; }
 
     public DateTime getDOB() {
@@ -34,11 +49,11 @@ public class Student {
         return id;
     }
 
-    public CourseProgramme[] getCourses() {
+    public ArrayList<CourseProgramme> getCourses() {
         return courses;
     }
 
-    public Module[] getModulesReg() {
+    public ArrayList<Module> getModulesReg() {
         return modulesReg;
     }
 }

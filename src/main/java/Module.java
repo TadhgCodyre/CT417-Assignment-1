@@ -1,14 +1,32 @@
+import ch.qos.logback.core.CoreConstants;
+
+import java.util.ArrayList;
+
 public class Module {
     private String moduleName;
     private int moduleId;
-    private Student[] relatedStudents;
-    private CourseProgramme[] relatedCourses;
+    private ArrayList<Student> relatedStudents;
+    private ArrayList<CourseProgramme> relatedCourses;
 
-    public Module(String name, int id, Student[] students, CourseProgramme[] courses) {
+    public Module(String name, int id, ArrayList<Student> students, ArrayList<CourseProgramme> courses) {
         this.moduleName = name;
         this.moduleId = id;
         this.relatedStudents = students;
         this.relatedCourses = courses;
+    }
+
+    public void addCourse(CourseProgramme course) {
+        if (course != null && !relatedCourses.contains(course)){
+            relatedCourses.add(course);
+            course.addModule(this);
+        }
+    }
+
+    public void addStudent(Student student) {
+        if (student != null && !relatedStudents.contains(student)){
+            relatedStudents.add(student);
+            student.addModule(this);
+        }
     }
 
     public String getModuleName() {
@@ -19,9 +37,9 @@ public class Module {
         return moduleId;
     }
 
-    public Student[] getRelatedStudent() {
+    public ArrayList<Student> getRelatedStudent() {
         return relatedStudents;
     }
 
-    public CourseProgramme[] getRelatedCourses() { return relatedCourses; }
+    public ArrayList<CourseProgramme> getRelatedCourses() { return relatedCourses; }
 }
