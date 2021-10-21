@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-
+    id 'maven-publish'
 }
 
 group 'org.example'
@@ -22,4 +22,16 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.TadhgCodyre'
+            artifactId = 'CT417-Assignment-1'
+            version = 'main-SNAPSHOT'
+
+            from components.java
+        }
+    }
 }
