@@ -56,4 +56,29 @@ public class Student {
     public ArrayList<Module> getModulesReg() {
         return modulesReg;
     }
+
+    public String toString() {
+        String output = "Student: " +getUserName()+ ", ID: "+getId()+ ", Date of birth: "
+                + getDOB() + "\n"
+                + "Courses: "+printCourseNames()+"\n"
+                + "Modules: "+printModuleNames()+"\n"
+                + "----------------------------------------------------\n";
+        return output;
+    }
+
+    private StringBuffer printCourseNames() {
+        StringBuffer courseNames = new StringBuffer();
+        for (int i = 0; i < courses.size(); i++) {
+            courseNames.append(courses.get(i).getCourseName()+", ");
+        }
+        return courseNames;
+    }
+
+    private StringBuffer printModuleNames() {
+        StringBuffer moduleNames = new StringBuffer();
+        for (int j = 0; j < modulesReg.size(); j++) {
+            moduleNames.append(modulesReg.get(j).getModuleName()+", ");
+        }
+        return moduleNames;
+    }
 }

@@ -51,4 +51,29 @@ public class CourseProgramme {
     public DateTime getEndDate() {
         return endDate;
     }
+
+    public String toString() {
+        String output = "Course: " +getCourseName()+ ", Start Date: "+getStartDate()+ ", End date: "
+                + getEndDate() + "\n"
+                + "Students: "+printStudentIds()+"\n"
+                + "Modules: "+printModuleNames()+"\n"
+                + "----------------------------------------------------\n";
+        return output;
+    }
+
+    private StringBuffer printStudentIds() {
+        StringBuffer courseNames = new StringBuffer();
+        for (int i = 0; i < studentList.size(); i++) {
+            courseNames.append(studentList.get(i).getId()+", ");
+        }
+        return courseNames;
+    }
+
+    private StringBuffer printModuleNames() {
+        StringBuffer moduleNames = new StringBuffer();
+        for (int j = 0; j < moduleList.size(); j++) {
+            moduleNames.append(moduleList.get(j).getModuleName()+", ");
+        }
+        return moduleNames;
+    }
 }

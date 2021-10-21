@@ -42,4 +42,28 @@ public class Module {
     }
 
     public ArrayList<CourseProgramme> getRelatedCourses() { return relatedCourses; }
+
+    public String toString() {
+        String output = "Module: " +getModuleName()+ ", Module ID: "+getModuleId()+ "\n"
+                + "Students: "+printStudentIds()+"\n"
+                + "Courses: "+printCourseNames()+"\n"
+                + "----------------------------------------------------\n";
+        return output;
+    }
+
+    private StringBuffer printStudentIds() {
+        StringBuffer courseNames = new StringBuffer();
+        for (int i = 0; i < relatedStudents.size(); i++) {
+            courseNames.append(relatedStudents.get(i).getId()+", ");
+        }
+        return courseNames;
+    }
+
+    private StringBuffer printCourseNames() {
+        StringBuffer moduleNames = new StringBuffer();
+        for (int j = 0; j < relatedCourses.size(); j++) {
+            moduleNames.append(relatedCourses.get(j).getCourseName()+", ");
+        }
+        return moduleNames;
+    }
 }
