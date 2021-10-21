@@ -1,11 +1,15 @@
+import org.joda.time.DateTime;
+
+import java.util.Date;
+
 public class CourseProgramme {
     private String courseName;
     private Module[] moduleList;
     private Student[] studentList;
-    private String startDate;
-    private String endDate;
+    private DateTime startDate;
+    private DateTime endDate;
 
-    public CourseProgramme(String name, Module[] modules, Student[] students, String sDate, String eDate) {
+    public CourseProgramme(String name, Module[] modules, Student[] students, DateTime sDate, DateTime eDate) {
         this.courseName = name;
         this.moduleList = modules;
         this.studentList = students;
@@ -25,11 +29,11 @@ public class CourseProgramme {
         return studentList;
     }
 
-    public String getStartDate() {
+    public DateTime getStartDate() {
         return startDate;
     }
 
-    public String getEndDate() {
+    public DateTime getEndDate() {
         return endDate;
     }
 }
