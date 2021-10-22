@@ -1,7 +1,6 @@
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class CourseProgramme {
     private String courseName;

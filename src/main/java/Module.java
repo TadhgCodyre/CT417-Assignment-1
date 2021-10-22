@@ -1,5 +1,3 @@
-import ch.qos.logback.core.CoreConstants;
-
 import java.util.ArrayList;
 
 public class Module {
